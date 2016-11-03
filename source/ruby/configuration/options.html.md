@@ -1,13 +1,37 @@
 ---
 title: "Ruby gem configuration options"
+classes: "configuration"
 ---
 
 The following list includes all configuration options with the name of the
 environment variable and the name of the key in the configuration file.
 
-### `APPSIGNAL_ACTIVE` / `:active`
+### `APPSIGNAL_ACTIVE` / `:active` - how we show it now
 
 Whether AppSignal is active for this environment, can be `true` or `false`.
+
+## push_api_key
+
+<table class="config">
+  <tr>
+    <th>Type</th>
+    <td>String</td>
+  </tr>
+  <tr>
+    <th>Default</th>
+    <td><code>nil</code></td>
+  </tr>
+  <tr>
+    <th>Environment variable</th>
+    <td><code>APPSIGNAL_PUSH_API_KEY</code></td>
+  </tr>
+  <tr>
+    <th>Available since</th>
+    <td>1.0</td>
+  </tr>
+</table>
+
+The key to authenticate with our push API.
 
 ### `APPSIGNAL_RUNNING_IN_CONTAINER` / `:running_in_container`
 
@@ -18,10 +42,6 @@ Docker.
 Since appsignal gem version 2.0 this setting is automatically detected and no
 manual configuration is necessary. If you're having trouble with the automatic
 detection, please [contact support](mailto:support@appsignal.com).
-
-### `APPSIGNAL_PUSH_API_KEY` / `:push_api_key`
-
-The key to authenticate with our push API.
 
 ### `APPSIGNAL_APP_NAME` / `:name`
 

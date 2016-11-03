@@ -31,6 +31,42 @@ class AppsignalMarkdown < Middleman::Renderers::MiddlemanRedcarpetHTML
     %(<h%s id="%s"><a href="#%s">%s</a></h%s>) % [level, anchor, anchor, text, level]
   end
 
+  def preprocess(doc)
+    doc.gsub(/([a-z]+)> (.+)$/) do
+      type = $1
+      value = $2
+      case type
+      when "gem"
+        <<-TAG.strip
+          <div class="custom-tag ruby-gem">
+            <span class="label">Ruby gem:</span>
+            <span class="value">#{value}</span>
+          </div>
+        TAG
+      when "type"
+        <<-TAG.strip
+          <div class="custom-tag value-type">
+            <span class="label">Type:</span>
+            <span class="value">#{value}</span>
+          </div>
+        TAG
+      when "default"
+        <<-TAG.strip
+          <div class="custom-tag default-value">
+            <span class="label">Default:</span>
+            <span class="value">#{value}</span>
+          </div>
+        TAG
+      else
+        <<-TAG.strip
+          <div class="custom-tag tag-#{type}">
+            <span class="value">#{value}</span>
+          </div>
+        TAG
+      end
+    end
+  end
+
   private
 
   # Add custom tags to content

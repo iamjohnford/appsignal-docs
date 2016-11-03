@@ -78,6 +78,41 @@
     code
       color: $dark
 
+  .custom-tag
+    display: inline-block
+    padding: 5px 10px
+    line-height: 1
+    background-color: #EEE
+    border-radius: 4px
+    font-size: 90%
+
+    .label
+      font-weight: 500
+
+  .custom-tag + .custom-tag
+    margin-left: 5px
+
+  .tag-beta
+    color: #FFF
+    background-color: #E28B00
+
+  .ruby-gem
+    color: #FFF
+    background-color: #CB3934
+
+  .tags
+    margin-bottom: 20px
+    position: relative
+    z-index: 2
+
+  h2 + .tags
+    float: right
+
+  .config
+    margin-top: 0
+    th
+      width: 30%
+
   .edit
     background: mix($blue,white,5%)
     border: 1px solid mix($blue,white,30%)
@@ -121,3 +156,14 @@
         padding: 20px
         border: none
         background: none
+
+.configuration
+  h2
+    margin-bottom: 0
+    border-bottom: 0
+    a
+      @extend code
+      display: block
+      padding: 0
+      font-size: 24px
+      background-color: transparent

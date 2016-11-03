@@ -2,10 +2,10 @@
 title: "Custom metrics <sup>Beta</sup>"
 ---
 
--> This feature was introduced with the `1.0` version of the AppSignal gem.
-   It allows sending various metrics to AppSignal where they can be graphed.
-
--> This feature is currently in beta.
+<div class="tags">
+gem> 1.0+
+<div class="custom-tag tag-beta">Beta</div>
+</div>
 
 With the AppSignal Ruby gem it's possible to add [custom
 instrumentation](/ruby/instrumentation/index.html) to get more details about
