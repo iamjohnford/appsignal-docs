@@ -1,13 +1,17 @@
 %nav.mod-side_nav
   %ul
-    %li
-      %h2 Getting started
+    %li.section
+      %h2.open
+        Getting started
+        = image_tag "arrow.svg"
       %ul
         %li= link_with_active 'Your first application', '/getting-started/new-application.html'
         %li= link_with_active 'Your user account', '/getting-started/user-account.html'
 
-    %li
-      %h2 Your applications
+    %li.section
+      %h2.open
+        Your applications
+        = image_tag "arrow.svg"
       %ul
         %li= link_with_active 'Settings', '/application/settings.html'
         %li
@@ -18,8 +22,10 @@
             %li= link_with_active 'PagerDuty', '/application/integrations/pagerduty.html'
             %li= link_with_active 'Webhooks', '/application/integrations/webhooks.html'
 
-    %li
-      %h2 Your organizations
+    %li.section
+      %h2.open
+        Your organizations
+        = image_tag "arrow.svg"
       %ul
         %li= link_with_active 'Overview', '/organization/index.html'
         %li
@@ -30,8 +36,10 @@
             %li= link_with_active 'Manage teams', '/organization/team/teams.html'
         %li= link_with_active 'Billing', '/organization/billing.html'
 
-    %li
-      %h2 AppSignal for Ruby
+    %li.section
+      %h2.open
+        AppSignal for Ruby
+        = image_tag "arrow.svg"
       %ul
         %li= link_with_active 'Overview', '/ruby/index.html'
         %li
@@ -71,30 +79,40 @@
             %li= link_with_active 'Method instrumentation', '/ruby/instrumentation/method-instrumentation.html'
             %li= link_with_active 'Link templates', '/ruby/instrumentation/link-templates.html'
 
-    %li
-      %h2 AppSignal for Elixir
+    %li.section
+      %h2.open
+        AppSignal for Elixir
+        = image_tag "arrow.svg"
       %ul
         %li= link_with_active 'Installation', '/elixir/installation.html'
 
-    %li
-      %h2 AppSignal for Front-end
+    %li.section
+      %h2.open
+        AppSignal for Front-end
+        = image_tag "arrow.svg"
       %ul
         %li= link_with_active 'Front-end error catching', '/front-end/error-handling.html'
 
-    %li
-      %h2 Metrics
+    %li.section
+      %h2.open
+        Metrics
+        = image_tag "arrow.svg"
       %ul
         %li= link_with_active 'Custom metrics <sup>Beta</sup>', '/metrics/custom.html'
         %li= link_with_active 'Host metrics', '/metrics/host.html'
 
-    %li
-      %h2 Support
+    %li.section
+      %h2.open
+        Support
+        = image_tag "arrow.svg"
       %ul
         %li= link_to 'Contact us!', 'mailto:support@appsignal.com'
         %li= link_with_active 'Supported Operating Systems', '/support/operating-systems.html'
 
-    %li
-      %h2 AppSignal API <sup>Beta</sup>
+    %li.section
+      %h2.open
+        AppSignal API <sup>Beta</sup>
+        = image_tag "arrow.svg"
       %ul
         %li= link_with_active 'Overview', '/api/index.html'
         %li= link_with_active 'Push API', '/push-api/overview.html'
@@ -104,8 +122,10 @@
         %li= link_with_active 'Samples', '/api/samples.html'
         %li= link_with_active 'Event names', '/api/event-names.html'
 
-    %li
-      %h2 AppSignal
+    %li.section
+      %h2.open
+        AppSignal
+        = image_tag "arrow.svg"
       %ul
         %li= link_with_active 'Contributing', '/appsignal/contributing.html'
         %li= link_with_active 'Security', '/appsignal/security.html'

@@ -2,25 +2,46 @@
   line-height: 2
 
   > ul > li
-    padding: 15px 20px
 
     & + li
       border-top: 1px solid $border
 
-    ul
+  ul ul
+    display: none
+    border-top: 1px solid $border
+    padding: 10px 20px
 
-      li ul
-        padding-left: 15px
-        margin: 5px 0px
-        border-left: 1px solid rgba($font-subheading, 0.6)
+    li ul
+      padding-left: 15px
+      margin: 5px 0px
+      border-left: 1px solid rgba($font-subheading, 0.6)
+
+
 
   h2
     font-size: $font-size-large
+    cursor: pointer
     +font-weight(bold)
-    margin-bottom: 5px
+    padding: 15px 20px
+    line-height: 1
+    background: lighten($border,5)
+    display: flex
+    align-items: center
+    user-select: none
 
     a
       color: inherit
+
+    img
+      margin-left: auto
+
+    &.open
+      img
+        transform: rotate(90deg)
+        user-select: none
+
+      + ul
+        display: block
 
   a,
   span

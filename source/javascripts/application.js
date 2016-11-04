@@ -11,4 +11,7 @@ $(document).ready(function(){
   $(window).on('resize',function(){
     $('.mod-header_nav').removeClass('show');
   });
+  $(".mod-side_nav h2").on('click',function(){
+    $(this).toggleClass("open");
+  });
 });
