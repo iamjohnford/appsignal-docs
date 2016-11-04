@@ -13,33 +13,24 @@ html
 
 body
   min-width: $sidebar
-  background: $body-bg
   height: 100%
 
 .layout-wrap
   @extend %clearfix
-  height: 100%
   margin: 0 auto
+  padding-left: $sidebar
+  max-width: 1200px
 
 .layout-main
+  margin-top: 80px
+
+.layout-side
+  position: fixed
+  left: calc(50% - 600px)
+  max-height: calc(100vh - 160px)
+  top: 120px
+  width: $sidebar
+  overflow-y: auto
   background: #fff
-  @extend %clearfix
-
-+min-width(800px)
-
-  .layout-side
-    width: $sidebar
-    position: fixed
-    +calc(height, '100% - 80px')
-    overflow-y: scroll
-    margin-top: 80px
-    +scrollbar(7px, rgba(mix($dark, white),.4), none)
-
-  .layout-main
-    +calc(width, '100% - #{$sidebar}')
-    position: fixed
-    left: $sidebar
-    +calc(height, '100% - 80px')
-    overflow-y: scroll
-    margin-top: 80px
-    +scrollbar(7px, rgba(mix($dark, white),.6), none)
+  border: 1px solid darken($border,10)
+  border-radius: 5px

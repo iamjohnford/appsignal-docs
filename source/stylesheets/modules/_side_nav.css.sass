@@ -1,10 +1,13 @@
 .mod-side_nav
-  padding: 40px
   line-height: 2
 
-  ul
+  > ul > li
+    padding: 15px 20px
+
+    & + li
+      border-top: 1px solid $border
+
     ul
-      margin-bottom: 20px
 
       li ul
         padding-left: 15px
@@ -12,7 +15,8 @@
         border-left: 1px solid rgba($font-subheading, 0.6)
 
   h2
-    @extend %h-small
+    font-size: $font-size-large
+    +font-weight(bold)
     margin-bottom: 5px
 
     a
